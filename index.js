@@ -39,3 +39,10 @@ inquirer
       err ? console.log(err) : console.log("Success!")
     );
   });
+
+  //function to generate the SVG image
+  function generateTheSVGImage (textColor, shapeColor, characters){
+    <svg version="1.1"
+     width="300" height="200"
+     xmlns="http://www.w3.org/2000/svg"></svg>
+  }
