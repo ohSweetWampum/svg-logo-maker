@@ -1,7 +1,7 @@
 const { describe, test } = require('jest');
 
 // Import the Square class from the file where it is defined.
-const Square = require('../lib/Square');
+const Square = require('../lib/Square.js');
 
 
 // A test suite for the Square class.
