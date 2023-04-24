@@ -1,5 +1,5 @@
-const inquirer = require("inquirer");
-const fs = require("fs");
+import inquirer from "inquirer";
+import fs from "fs";
 
 inquirer
   .prompt([
@@ -30,19 +30,49 @@ inquirer
      
       },
   ])
+ 
+
+
   .then((data) => {
     console.log(data);
-    const filename = `${data.name.toLowerCase().split(" ").join("")}.json`;
-    //Farley Wittles 
-    //farleywittles.json
+    const filename = `${data.characters.toLowerCase().split(" ").join("")}.json`;
+    
     fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
       err ? console.log(err) : console.log("Success!")
     );
+  
+    const svgImage = generateTheSVGImage(data.textColor, data.shapeColor, data.characters, data.shapes);
+    console.log(svgImage);
+  
+    fs.writeFile(`${data.characters.toLowerCase().split(" ").join("")}.svg`, svgImage, (err) =>
+      err ? console.log(err) : console.log("SVG file created successfully!")
+    );
   });
+  
 
   //function to generate the SVG image
-  function generateTheSVGImage (textColor, shapeColor, characters){
-    <svg version="1.1"
-     width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg"></svg>
+  function generateTheSVGImage(textColor, shapeColor, characters, shape) {
+    let shapeSVG = '';
+  
+    switch (shape) {
+      case 'circle':
+        shapeSVG = `<circle cx="150" cy="100" r="80" fill="${shapeColor}" />`;
+        break;
+      case 'triangle':
+        shapeSVG = `<polygon points="150,30 270,170 30,170" fill="${shapeColor}" />`;
+        break;
+      case 'square':
+        shapeSVG = `<rect x="50" y="50" width="200" height="200" fill="${shapeColor}" />`;
+        break;
+    }
+  
+    return `
+      <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        ${shapeSVG}
+        <text x="150" y="120" font-size="24" text-anchor="middle" fill="${textColor}">
+          ${characters}
+        </text>
+      </svg>
+    `;
   }
+  
