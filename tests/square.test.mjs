@@ -23,7 +23,7 @@ describe('Square', () => {
     const squareInstance = new Square('blue', 'pink', 'hey');
     const expectedResult = `
     <rect x="0" y="0" width="300" height="200" fill="red" />
-      <text x="125" y="150" font-size="24" text-anchor="middle" fill="white">
+      <text x="200" y="160" font-size="24" text-anchor="middle" fill="white">
         A
       </text>
     `;

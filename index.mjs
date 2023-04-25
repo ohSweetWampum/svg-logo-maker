@@ -38,14 +38,14 @@ inquirer
     const filename = `${data.characters.toLowerCase().split(" ").join("")}.json`;
     
     fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
-      err ? console.log(err) : console.log("Success!")
+      err ? console.log(err) : console.log("successful")
     );
   
     const svgImage = generateTheSVGImage(data.textColor, data.shapeColor, data.characters, data.shapes);
     console.log(svgImage);
   
     fs.writeFile(`${data.characters.toLowerCase().split(" ").join("")}.svg`, svgImage, (err) =>
-      err ? console.log(err) : console.log("SVG file created successfully!")
+      err ? console.log(err) : console.log("Generated logo.svg! File was successfully created!")
     );
   });
   
@@ -59,17 +59,17 @@ inquirer
         shapeSVG = `<circle cx="150" cy="100" r="80" fill="${shapeColor}" />`;
         break;
       case 'triangle':
-        shapeSVG = `<polygon points="150,30 270,170 30,170" fill="${shapeColor}" />`;
+        shapeSVG = `<polygon points="150, 18 244, 182 56, 182" fill="${shapeColor}" />`;
         break;
       case 'square':
-        shapeSVG = `<rect x="50" y="50" width="200" height="200" fill="${shapeColor}" />`;
+        shapeSVG = `<rect x="0" y="0" width="200" height="200" fill="${shapeColor}" />`;
         break;
     }
   
     return `
       <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
         ${shapeSVG}
-        <text x="150" y="120" font-size="24" text-anchor="middle" fill="${textColor}">
+        <text x="200" y="160" font-size="24" text-anchor="middle" fill="${textColor}">
           ${characters}
         </text>
       </svg>

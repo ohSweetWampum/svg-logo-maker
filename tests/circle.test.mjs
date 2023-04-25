@@ -20,8 +20,8 @@ describe('Circle', () => {
   test('should render a Circle with the given parameters', () => {
     const circleInstance = new Circle('blue', 'pink', 'hey');
     const expectedResult = `
-    <rect x="0" y="0" width="300" height="200" fill="red" />
-      <text x="125" y="150" font-size="24" text-anchor="middle" fill="white">
+    <ellipse cx="150" cy="100" rx="150" ry="100"  fill="red" />
+      <text x="200" y="160" font-size="24" text-anchor="middle" fill="white">
         A
       </text>
     `;
