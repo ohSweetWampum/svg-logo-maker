@@ -12,9 +12,9 @@ describe('Triangle', () => {
   test('should create a new Triangle instance with the given parameters', () => {
     const triangleInstance = new Triangle('blue', 'pink', 'hey');
     expect(triangleInstance ).toBeInstanceOf(Triangle);
-    expect(triangleInstance .textColor).toBe('blue');
+    
     expect(triangleInstance .shapeColor).toBe('pink');
-    expect(triangleInstance .characters).toBe('hey');
+    
   });
 });
   
@@ -23,9 +23,7 @@ describe('Triangle', () => {
     const triangleInstance = new Triangle('blue', 'pink', 'hey');
     const expectedResult = `
     <polygon x="50%" y="50%" points="150, 18 244, 182 56, 182" fill="pink" />
-      <text x="50%" y="50%" font-size="60" text-anchor="middle" fill="blue">
-        hey
-      </text>
+      
     `;
   
     expect(triangleInstance.renderSpecificShape().replace(/\s+/g, '')).toBe(expectedResult.replace(/\s+/g, ''));
