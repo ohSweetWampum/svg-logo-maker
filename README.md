@@ -10,15 +10,31 @@ A SVG logo generator
 
 This command-line logo generator is a Node.js application that allows the user to create a custom SVG logo by providing input through the command line interface. The user can enter up to three characters for the text, choose a color for the text and a color for the shape by entering a keyword or by providing a hexadecimal number. The user can also choose a shape from a list of available shapes (circle, triangle, or square). Once the user has entered all the necessary information, an SVG file created in the examples folder.
 
-## Technology Used
+## Table of Contents
 
-- OpenWeatherAPIs
+- [Installation](#installation)
+- [Technology](#technology)
+- [Usage](#usage)
+- [Code](#Code)
+- [Learning](#learning)
+- [Author](#author)
+- [Tests](#tests)
+- [Credits](#credits)
+- [License](#license)
+
+## Installation
+
+Run "npm i" in your CLI. Double check to see if you have the required dependecies installed.
+
+## Technology
+
+- Node.js
   [Learn about Node.js](https://nodejs.org/en/docs)
 
-- Bootstrap
+- Jest
   [Learn about Jest](https://jestjs.io/docs/getting-started)
 
-- Day.js
+- Inquirer
   [Learn about Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4)
 
 - JavaScript
@@ -33,7 +49,7 @@ This command-line logo generator is a Node.js application that allows the user t
 2. Navigate to correct directory. Enter node index.js
 3. Mkae your selctions
 
-## Code Highlight
+## Code
 
 This code defines a function that generates an SVG image with a shape and color specified by the shape and shapeColor arguments. The textColor and characters arguments are used to add text to the image, which is positioned using the textX, textY, and textDY variables. The textY value varies depending on the shape to position the text appropriately. The function uses a switch statement to determine the shape and generate the corresponding SVG code.
 
@@ -66,7 +82,7 @@ This code defines a function that generates an SVG image with a shape and color 
     }
 ```
 
-## Learning Points
+## Learning
 
 - Jest and Inquirer
 - Learned about SVGs
@@ -74,13 +90,17 @@ This code defines a function that generates an SVG image with a shape and color 
 - Classes
 - Test suites
 
-## Author Info
+## Author
 
 Matthew Gibson
 
 - [Portfolio](https://github.com/ohSweetWampum)
 - [LinkedIn](https://www.linkedin.com/in/matthew-gibson-6b9b12237/)
 - [Github](https://github.com/ohSweetWampum)
+
+## Tests
+
+To run a test, enter "npm test" in your CLI in the test directory
 
 ## Credits
 
