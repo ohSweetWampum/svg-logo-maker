@@ -1,6 +1,6 @@
 {
-	"characters": "mtg",
+	"characters": "MTG",
 	"shapes": "square",
-	"textColor": "pink",
-	"shapeColor": "purple"
+	"textColor": "red",
+	"shapeColor": "blue"
 }

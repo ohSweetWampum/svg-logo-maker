@@ -53,26 +53,37 @@ inquirer
   //function to generate the SVG image
   function generateTheSVGImage(textColor, shapeColor, characters, shape) {
     let shapeSVG = '';
+    let textX, textY, textDY;
   
     switch (shape) {
       case 'circle':
-        shapeSVG = `<circle x="50%" y="50%" cx="150" cy="100" r="80" fill="${shapeColor}" />`;
+        shapeSVG = `<circle cx="150" cy="100" r="80" fill="${shapeColor}" />`;
+        textX = "50%";
+        textY = "50%";
+        textDY = ".3em";
         break;
       case 'triangle':
-        shapeSVG = `<polygon x="50%" y="50%" points="150, 18 244, 182 56, 182" fill="${shapeColor}" />`;
+        shapeSVG = `<polygon points="150, 18 244, 182 56, 182" fill="${shapeColor}" />`;
+        textX = "50%";
+        textY = "75%";
+        textDY = ".3em";
         break;
       case 'square':
-        shapeSVG = `<rect x="50%" y="50%" width="200" height="200" fill="${shapeColor}" />`;
+        shapeSVG = `<rect x="50" y="0" width="200" height="200" fill="${shapeColor}" />`;
+        textX = "50%";
+        textY = "50%";
+        textDY = ".3em";
         break;
     }
-  
+    
     return `
       <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
         ${shapeSVG}
-        <text x="50%" y="50%" font-size="60" text-anchor="middle" fill="${textColor}">
+        <text x="${textX}" y="${textY}" dy="${textDY}" font-size="60" text-anchor="middle" fill="${textColor}">
           ${characters}
         </text>
       </svg>
     `;
+    
   }
   
