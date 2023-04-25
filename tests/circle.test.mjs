@@ -1,7 +1,7 @@
 import { describe, test } from 'jest';
 
 
-import Circle from '../lib/circle.mjs';
+import Circle from '../lib/circle';
 
 
 describe('Circle', () => {

@@ -2,7 +2,7 @@ import { describe, test } from 'jest';
 
 
 
-import Square from '../lib/square.mjs';
+import Square from '../lib/square';
 
 
 

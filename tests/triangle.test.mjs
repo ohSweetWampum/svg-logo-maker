@@ -5,7 +5,7 @@ import { describe, test } from 'jest';
 
 
 
-import Triangle from '../lib/triangle.mjs';
+import Triangle from '../lib/triangle';
 
 
 describe('Triangle', () => {
