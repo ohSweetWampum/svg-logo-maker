@@ -1,8 +1,6 @@
-import { describe, test } from 'jest';
 
+const Square = require('../lib/square');
 
-
-import Square from '../lib/square';
 
 
 
@@ -24,7 +22,7 @@ describe('Square', () => {
     const expectedResult = `
     <rect  x="50" y="0" width="200" height="200" fill="pink"  />
       <text x="50%" y="50%" font-size="60" text-anchor="middle" fill="blue">
-        A
+        hey
       </text>
     `;
   

@@ -1,7 +1,6 @@
-import { describe, test } from 'jest';
 
+const Circle = require('../lib/circle');
 
-import Circle from '../lib/circle';
 
 
 describe('Circle', () => {
@@ -20,9 +19,9 @@ describe('Circle', () => {
   test('should render a Circle with the given parameters', () => {
     const circleInstance = new Circle('blue', 'pink', 'hey');
     const expectedResult = `
-    <circle x="50%" y="50%" cx="150" cy="100" rx="150" ry="100"  fill="red" />
-      <text x="50%" y="50%" font-size="60" text-anchor="middle" fill="white">
-        A
+    <circle x="50%" y="50%" cx="150" cy="100" rx="150" ry="100"  fill="pink" />
+      <text x="50%" y="50%" font-size="60" text-anchor="middle" fill="blue">
+        hey
       </text>
     `;
   

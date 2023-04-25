@@ -1,5 +1,7 @@
-import inquirer from "inquirer";
-import fs from "fs";
+const inquirer = require('inquirer');
+const fs = require('fs');
+// import shape classes from shapes.js
+
 
 inquirer
   .prompt([

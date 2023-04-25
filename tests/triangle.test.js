@@ -1,11 +1,9 @@
 
 
 
-import { describe, test } from 'jest';
 
+const Triangle = require('../lib/triangle');
 
-
-import Triangle from '../lib/triangle';
 
 
 describe('Triangle', () => {
@@ -24,9 +22,9 @@ describe('Triangle', () => {
   test('should render a Triangle with the given parameters', () => {
     const triangleInstance = new Triangle('blue', 'pink', 'hey');
     const expectedResult = `
-    <polygon x="50%" y="50%" points="150, 18 244, 182 56, 182" fill="red" />
-      <text x="50%" y="50%" font-size="60" text-anchor="middle" fill="white">
-        A
+    <polygon x="50%" y="50%" points="150, 18 244, 182 56, 182" fill="pink" />
+      <text x="50%" y="50%" font-size="60" text-anchor="middle" fill="blue">
+        hey
       </text>
     `;
   
