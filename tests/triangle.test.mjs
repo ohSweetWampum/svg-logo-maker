@@ -24,8 +24,8 @@ describe('Triangle', () => {
   test('should render a Triangle with the given parameters', () => {
     const triangleInstance = new Triangle('blue', 'pink', 'hey');
     const expectedResult = `
-    <polygon points="150, 18 244, 182 56, 182" fill="red" />
-      <text x="200" y="160" font-size="24" text-anchor="middle" fill="white">
+    <polygon x="50%" y="50%" points="150, 18 244, 182 56, 182" fill="red" />
+      <text x="50%" y="50%" font-size="60" text-anchor="middle" fill="white">
         A
       </text>
     `;

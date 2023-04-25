@@ -22,8 +22,8 @@ describe('Square', () => {
   test('should render a Square with the given parameters', () => {
     const squareInstance = new Square('blue', 'pink', 'hey');
     const expectedResult = `
-    <rect x="0" y="0" width="300" height="200" fill="red" />
-      <text x="200" y="160" font-size="24" text-anchor="middle" fill="white">
+    <rect x="50%" y="50%" width="300" height="200" fill="red" />
+      <text x="50%" y="50%" font-size="60" text-anchor="middle" fill="white">
         A
       </text>
     `;

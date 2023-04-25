@@ -56,20 +56,20 @@ inquirer
   
     switch (shape) {
       case 'circle':
-        shapeSVG = `<circle cx="150" cy="100" r="80" fill="${shapeColor}" />`;
+        shapeSVG = `<circle x="50%" y="50%" cx="150" cy="100" r="80" fill="${shapeColor}" />`;
         break;
       case 'triangle':
-        shapeSVG = `<polygon points="150, 18 244, 182 56, 182" fill="${shapeColor}" />`;
+        shapeSVG = `<polygon x="50%" y="50%" points="150, 18 244, 182 56, 182" fill="${shapeColor}" />`;
         break;
       case 'square':
-        shapeSVG = `<rect x="0" y="0" width="200" height="200" fill="${shapeColor}" />`;
+        shapeSVG = `<rect x="50%" y="50%" width="200" height="200" fill="${shapeColor}" />`;
         break;
     }
   
     return `
       <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
         ${shapeSVG}
-        <text x="200" y="160" font-size="24" text-anchor="middle" fill="${textColor}">
+        <text x="50%" y="50%" font-size="60" text-anchor="middle" fill="${textColor}">
           ${characters}
         </text>
       </svg>
