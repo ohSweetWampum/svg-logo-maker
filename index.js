@@ -36,7 +36,6 @@ inquirer
 
 
   .then((data) => {
-    console.log(data);
     const filename = `${data.characters.toLowerCase().split(" ").join("")}.json`;
     
     fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
@@ -44,7 +43,7 @@ inquirer
     );
   
     const svgImage = generateTheSVGImage(data.textColor, data.shapeColor, data.characters, data.shapes);
-    console.log(svgImage);
+   
   
     fs.writeFile(`./examples/${data.characters.toLowerCase().split(" ").join("")}.svg`, svgImage, (err) =>
       err ? console.log(err) : console.log("Generated logo.svg")
