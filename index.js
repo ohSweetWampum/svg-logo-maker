@@ -46,8 +46,8 @@ inquirer
     const svgImage = generateTheSVGImage(data.textColor, data.shapeColor, data.characters, data.shapes);
     console.log(svgImage);
   
-    fs.writeFile(`${data.characters.toLowerCase().split(" ").join("")}.svg`, svgImage, (err) =>
-      err ? console.log(err) : console.log("Generated logo.svg! File was successfully created!")
+    fs.writeFile(`./examples/${data.characters.toLowerCase().split(" ").join("")}.svg`, svgImage, (err) =>
+      err ? console.log(err) : console.log("Generated logo.svg")
     );
   });
   
@@ -79,13 +79,14 @@ inquirer
     }
     
     return `
-      <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-        ${shapeSVG}
-        <text x="${textX}" y="${textY}" dy="${textDY}" font-size="60" text-anchor="middle" fill="${textColor}">
-          ${characters}
-        </text>
-      </svg>
-    `;
+    <svg viewBox="0 0 300 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      ${shapeSVG}
+      <text x="${textX}" y="${textY}" dy="${textDY}" font-size="60" text-anchor="middle" fill="${textColor}">
+        ${characters}
+      </text>
+    </svg>
+  `;
+  
     
   }
   
